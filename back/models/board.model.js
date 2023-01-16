@@ -30,11 +30,11 @@ module.exports = (sequelize, Sequelize) => {
           }
         );
       }
-      static associate(models) {
-        this.belongsTo(models.User, {
-          foreignKey: "userid",
-        });
-      }
+      // static associate(models) {
+      //   this.belongsTo(models.User, {
+      //     foreignKey: "userid",
+      //   });
+      // }
     }
     Board.createTable();
     return Board;

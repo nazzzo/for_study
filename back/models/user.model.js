@@ -15,22 +15,17 @@ module.exports = (sequelize, Sequelize) => {
               type: Sequelize.STRING(20),
               alllowNull: false,
             },
-            gender: {
-                type: Sequelize.STRING(6),
-                defaultValue: 'male',
-                alllowNull: false,
-              },
           },
           {
             sequelize,
           }
         );
       }
-      static associate(models) {
-        this.hasMany(models.Board, {
-          foreignKey: "userid",
-        });
-      }
+      // static associate(models) {
+      //   this.hasMany(models.Board, {
+      //     foreignKey: "userid",
+      //   });
+      // }
     }
     User.createTable();
   

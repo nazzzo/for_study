@@ -25,6 +25,6 @@ app.use((error, req, res, next) => {
 });
 
 app.listen(PORT, async () => {
-  await sequelize.sync({ force: true });
+  await sequelize.sync({ force: false });
   console.log(`listening on ${PORT}`);
 });
